@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:hover {
+    cursor: crosshair;
+}
+
+#scoreboard {
+    height: 25px;
+    background-color: black;
+    border-bottom: 1px solid white;
+
+    display: flex;
+}
+
+#scoreboard p {
+    border-right: 1px solid white;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#pause-play {
+    padding: 3px;
+    /* height: 80%; */
+}
+
+#pause-play:hover {
+    cursor: pointer;
+}
+
+/* animate the background */
+
+@keyframes animate-background {
+    from {
+        background-position: center 200%;
+    }
+    to {
+        background-position: center 0;
+    }
+}
+
+#background {
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    height: calc(100% - 25px);
+
+    background: url("./assets/bg.png");
+    background-size: auto 200%;
+
+    animation: animate-background 15s linear infinite;
+
+}
+
+
+
+#game {
+    z-index: 2;
+    /* background-image: url('assets/bg.png'); */
+    /* background-size: cover; */
+    position: absolute; /* remove the scrollbars */
+}
+
+#game:hover {
+    cursor: crosshair;
+}
+
+#levelUp {
+    visibility: hidden;
+
+    position: fixed;
+
+    /* margin: auto; */
+
+    left: 50%;
+    right: 50%;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+
+    z-index: 3;
+
+}
+
+/* Game paused */
+
+#paused {
+    visibility: hidden;
+    z-index: 3;
+
+    position: absolute;
+
+    margin: auto;
+    width: 100%;
+
+    /* background-color: rgba(1, 1, 1, 0.5); */
+
+    margin: auto;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+#paused h1 {
+    font-size: 80px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#paused p {
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#resume:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Game over screen */
+
+#gameOver {
+    visibility: hidden;
+    z-index: 3;
+
+    position: absolute;
+    margin: auto;
+    width: 100%;
+
+    /* background-color: rgba(1, 1, 1, 0.5); */
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+#gameOver h1 {
+    font-size: 80px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#gameOver p {
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#retry:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}

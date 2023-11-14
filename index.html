@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Typing game!</title>
+    <script src="words.js"></script>
+</head>
+
+<body>
+    <div id="scoreboard">
+        <p id="scoreboard-level"></p>
+        <p id="elapsedTime"></p>
+        <p id="points"></p>
+        <img id="pause-play" src="./assets/pause.png" onclick="pausePlay()">
+    </div>
+
+    <div id="background"></div>
+    <canvas id="game"></canvas>
+
+
+    <div id="paused">
+        <h1>Game Paused</h1>
+        <p id="resume" onclick="pausePlay()">Resume</p>
+    </div>
+
+
+    <div id="levelUp">
+        <p id="levelCard-level"></p>
+    </div>
+
+
+
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <div class="stats">
+            <!-- <p>Level</p>
+            <p>Score</p>
+            <p>WPM</p>
+            <p>Accuracy</p> -->
+        </div>
+        <p id="retry" onclick="retry()">Try Again</p>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
